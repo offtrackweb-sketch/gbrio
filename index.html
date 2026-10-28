@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G-BRIO — Design your G</title>
+  <meta name="description" content="G-Brio converts G-Classes into individual, refined and unique open-top masterpieces. Configure yours in real-time 3D and have it delivered worldwide." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/app-icon.png" />
+  <link rel="stylesheet" href="css/gbrio.css?v=28" />
+  <link rel="alternate" hreflang="en" href="https://www.g-brio.com/" />
+  <link rel="alternate" hreflang="de" href="https://www.g-brio.com/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.g-brio.com/" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <svg class="loader__g" viewBox="0 0 271 272" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M31 271.403C13.8792 271.403 0 257.524 0 240.403V31.4033C0 14.2825 13.8792 0.40332 31 0.40332H240C257.121 0.40332 271 14.2825 271 31.4033V240.403C271 257.524 257.121 271.403 240 271.403H31ZM217.094 98.7867C217.094 98.7867 210.982 99.3325 209.759 97.8876C209.093 97.1004 208.8 95.772 208.8 95.772C208.8 95.772 208.609 93.7528 207.649 92.8528C206.26 91.5514 202.909 91.9538 202.909 91.9538H117.144C117.144 91.9538 107.482 90.3623 103.674 93.9317C100.537 96.8719 100.988 104.428 100.988 104.428V164.805C100.988 164.805 100.459 171.295 103.482 174.128C106.922 177.353 115.581 176.826 115.581 176.826H158.524C158.524 176.826 168.064 177.607 171.775 174.128C174.359 171.706 174.269 166.55 174.269 166.55V155.447C174.269 155.447 174.504 150.074 171.967 147.696C168.474 144.422 159.449 145.358 159.449 145.358H144.242C144.242 145.358 135.433 146.177 132.065 143.021C129.842 140.937 129.955 136.517 129.955 136.517V129.905C129.955 129.905 130.175 125.373 132.257 123.421C134.672 121.157 140.201 121.623 140.201 121.623H213.291C213.291 121.623 224.384 120.586 228.751 124.68C232.703 128.385 231.82 137.341 231.82 137.341V187.31C231.82 187.31 232.095 195.448 228.175 199.123C224.043 202.996 214.288 202.899 214.288 202.899H52.4859C52.4859 202.899 43.35 203.177 39.4086 199.482C35.456 195.777 35.7637 187.18 35.7637 187.18V82.8167C35.7637 82.8167 35.3088 74.9383 39.0249 71.455C43.119 67.6175 53.1336 68.0386 53.1336 68.0386H214.666C214.666 68.0386 227.144 66.892 231.82 71.2752C234.522 73.8082 234.506 78.7849 234.506 78.7849V87.532C234.506 87.532 235.226 94.6954 232.396 97.3482C230.079 99.5197 224.677 98.7867 224.677 98.7867H217.094Z" fill="currentColor"/>
+    </svg>
+    <div class="loader__bar"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" role="banner">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="G-Brio">
+        <img src="images/g-brio-20logo-20white.svg" alt="G-Brio" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html" class="nav__link is-active">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="inserate.html" class="nav__link">Inventory</a>
+        <a href="configurator.html" class="nav__link">Configurator</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang" aria-label="Language"><a href="index.html" hreflang="en" lang="en" class="active">EN</a><span class="sep">/</span><a href="de/index.html" hreflang="de" lang="de">DE</a></span>
+        <a href="configurator.html" class="btn btn--nav">
+          Configure <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <button class="nav__burger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="inserate.html">Inventory</a>
+    <a href="configurator.html">Configurator</a>
+    <a href="contact.html">Contact</a>
+    <div class="nav__mobile-lang"><a href="index.html" hreflang="en" lang="en" class="active">EN</a><a href="de/index.html" hreflang="de" lang="de">DE</a></div>
+  </div>
+
+  <main>
+
+    <!-- HERO (full-bleed) -->
+    <section class="hero">
+      <div class="hero__media">
+        <video autoplay muted loop playsinline preload="auto" poster="images/header-gbrio.jpg">
+          <source src="video/gbrio-header.mp4?v=2" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="display hero__headline" aria-label="How does your G-Brio look?">
+          <span>How&nbsp;does</span>
+          <span>your</span>
+          <span class="hero__g" aria-hidden="true">
+            <svg viewBox="0 0 271 272" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="G">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M31 271.403C13.8792 271.403 0 257.524 0 240.403V31.4033C0 14.2825 13.8792 0.40332 31 0.40332H240C257.121 0.40332 271 14.2825 271 31.4033V240.403C271 257.524 257.121 271.403 240 271.403H31ZM217.094 98.7867C217.094 98.7867 210.982 99.3325 209.759 97.8876C209.093 97.1004 208.8 95.772 208.8 95.772C208.8 95.772 208.609 93.7528 207.649 92.8528C206.26 91.5514 202.909 91.9538 202.909 91.9538H117.144C117.144 91.9538 107.482 90.3623 103.674 93.9317C100.537 96.8719 100.988 104.428 100.988 104.428V164.805C100.988 164.805 100.459 171.295 103.482 174.128C106.922 177.353 115.581 176.826 115.581 176.826H158.524C158.524 176.826 168.064 177.607 171.775 174.128C174.359 171.706 174.269 166.55 174.269 166.55V155.447C174.269 155.447 174.504 150.074 171.967 147.696C168.474 144.422 159.449 145.358 159.449 145.358H144.242C144.242 145.358 135.433 146.177 132.065 143.021C129.842 140.937 129.955 136.517 129.955 136.517V129.905C129.955 129.905 130.175 125.373 132.257 123.421C134.672 121.157 140.201 121.623 140.201 121.623H213.291C213.291 121.623 224.384 120.586 228.751 124.68C232.703 128.385 231.82 137.341 231.82 137.341V187.31C231.82 187.31 232.095 195.448 228.175 199.123C224.043 202.996 214.288 202.899 214.288 202.899H52.4859C52.4859 202.899 43.35 203.177 39.4086 199.482C35.456 195.777 35.7637 187.18 35.7637 187.18V82.8167C35.7637 82.8167 35.3088 74.9383 39.0249 71.455C43.119 67.6175 53.1336 68.0386 53.1336 68.0386H214.666C214.666 68.0386 227.144 66.892 231.82 71.2752C234.506 73.8082 234.506 78.7849 234.506 78.7849V87.532C234.506 87.532 235.226 94.6954 232.396 97.3482C230.079 99.5197 224.677 98.7867 224.677 98.7867H217.094Z" fill="#ffffff"/>
+            </svg>
+          </span>
+          <span>look?</span>
+        </h1>
+
+        <p class="hero__sub">
+          Vehicle refinement at the highest level. We convert G-Classes with
+          attention to detail and technical perfection — for everyone who is
+          looking for something special.
+        </p>
+
+        <div class="hero__ctas">
+          <a href="configurator.html" class="btn btn--light">
+            Design your G <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#inserate" class="btn btn--on-dark">
+            View inventory
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section">
+      <div class="showcase">
+        <div class="showcase__text reveal">
+          <p class="eyebrow">The G-Brio</p>
+          <h2 class="h1">A G-Class, unbound.</h2>
+          <p class="lead">
+            Every G-Brio starts as an original Mercedes-Benz G-Class and is
+            fully restored and converted by hand in our Munich atelier —
+            body, frame, drivetrain and interior, finished to your
+            specification. Built one at a time, never in series.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="about.html" class="btn">Our story</a>
+            <a href="configurator.html" class="btn btn--primary">
+              Design your G <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="showcase__media reveal reveal--delay-1">
+          <img src="images/gbrio-villa.jpg"
+               srcset="images/gbrio-villa-1200.jpg 1200w, images/gbrio-villa.jpg 2400w"
+               sizes="(max-width: 1024px) 100vw, 55vw"
+               alt="G-Brio on the coast" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PITCH — editorial headline + full-bleed config image -->
+    <section class="pitch" id="configurator">
+      <div class="pitch__lead">
+        <h2 class="pitch__headline reveal">
+          <span>Configured by you.</span>
+          <span>Hand-built by us.</span>
+        </h2>
+        <div class="pitch__aside reveal reveal--delay-1">
+          <p>
+            Configure your G-Brio — rotate, zoom, swap finishes and send
+            your request directly to us.
+          </p>
+          <a href="configurator.html" class="pitch__link">
+            Open the configurator <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+      <a class="cfg reveal reveal--delay-2" href="configurator.html"
+         aria-label="Open the 3D configurator">
+        <div class="cfg__media">
+          <img src="images/configurator-image.jpg" sizes="100vw" alt="G-Brio 3D configurator" />
+        </div>
+
+        <div class="cfg__panel" aria-hidden="true">
+          <div class="cfg__head">
+            <span class="cfg__count">Step <b data-cfg-index>1</b> <i>/</i> <span data-cfg-total>14</span></span>
+            <span class="cfg__live">Live 3D</span>
+          </div>
+
+          <div class="cfg__step" data-cfg-step>Model</div>
+          <ul class="cfg__options" data-cfg-options></ul>
+
+          <div class="cfg__bar"><i data-cfg-bar></i></div>
+
+          <div class="cfg__foot">
+            <span class="cfg__from">From <b>89.999 €</b></span>
+            <span class="cfg__go">Configure yours <i aria-hidden="true">→</i></span>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- RAIL — 4 editorial hairline columns (no numbers) -->
+    <section class="rail" id="craft">
+      <div class="rail__col reveal">
+        <span class="rail__label">Base vehicle</span>
+        <p class="rail__body">Mercedes-Benz G-Class, W460 / W461</p>
+      </div>
+      <div class="rail__col reveal reveal--delay-1">
+        <span class="rail__label">Production</span>
+        <p class="rail__body">Hand-finished — meticulously restored by experts</p>
+      </div>
+      <div class="rail__col reveal reveal--delay-2">
+        <span class="rail__label">Delivery</span>
+        <p class="rail__body">Worldwide, to your address</p>
+      </div>
+      <div class="rail__col reveal reveal--delay-3">
+        <span class="rail__label">Service</span>
+        <p class="rail__body">Full warranty, Mercedes-Benz partners worldwide</p>
+      </div>
+    </section>
+
+    <!-- INSERATE — available vehicles -->
+    <section class="inserate-section" id="inserate">
+      <div class="inserate-head">
+        <div class="reveal">
+          <p class="eyebrow">Inventory</p>
+          <h2 class="h1">Available now.</h2>
+        </div>
+        <p class="inserate-head__side reveal reveal--delay-1">
+          Fully restored Mercedes-Benz G-Class models, fully documented
+          and ready to drive.
+        </p>
+      </div>
+
+      <div class="inserate-grid">
+        <a href="inserate-230ge.html" class="inserate-card reveal is-sold">
+          <div class="inserate-card__media">
+            <img src="images/inserate/car1/Gbrio-Cover.jpg"
+                 alt="Mercedes-Benz 230GE PUCH — Yellow Green Matte" />
+            <span class="inserate-card__status">Sold</span>
+          </div>
+          <div class="inserate-card__body">
+            <h3 class="inserate-card__name">Mercedes-Benz 230GE PUCH</h3>
+            <div class="inserate-card__price">Sold</div>
+            <div class="inserate-card__meta">
+              <span>1992</span>
+              <span>94,000 km</span>
+              <span>122 hp</span>
+              <span>Yellow Green Matte</span>
+            </div>
+            <span class="inserate-card__cta">View vehicle <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+
+        <a href="inserate-240gd.html" class="inserate-card reveal reveal--delay-1">
+          <div class="inserate-card__media">
+            <img src="images/inserate/car2/Gbrio-Harbour.jpg"
+                 alt="Mercedes-Benz 240GD — Pebble Grey" />
+            <span class="inserate-card__status">For sale</span>
+          </div>
+          <div class="inserate-card__body">
+            <h3 class="inserate-card__name">Mercedes-Benz 240GD</h3>
+            <div class="inserate-card__price">149.999€</div>
+            <div class="inserate-card__meta">
+              <span>M113 5.0L V8</span>
+              <span>306 hp</span>
+              <span>5-Speed Auto</span>
+              <span>Pebble Grey</span>
+            </div>
+            <span class="inserate-card__cta">View vehicle <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- CLOSER — final editorial CTA (light) -->
+    <section class="closer">
+      <div class="closer__inner">
+        <h2 class="closer__h reveal">
+          Start your G&#8209;Brio.
+        </h2>
+        <div class="closer__links reveal reveal--delay-1">
+          <a href="configurator.html" class="closer__link">
+            Open the configurator
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="contact.html" class="closer__link">
+            Talk to us
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="mailto:info@g-brio.com" class="closer__link">
+            info@g-brio.com
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <div class="locations" id="locations">
+      <div class="location reveal">
+        <div>
+          <div class="location__tag">Showroom</div>
+          <div class="location__city">Mallorca, Spain</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER (full-bleed dark) -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html"><img src="images/g-brio-20logo-20white.svg" alt="G-Brio" /></a>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/gbrio_official" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="inserate.html">Inventory</a></li>
+          <li><a href="configurator.html">Configurator</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:info@g-brio.com">info@g-brio.com</a></li>
+          <li><a href="tel:+494052470230">+49 40 52470230</a></li>
+          <li>Mallorca, Spain</li>
+        </ul>
+      </div>
+      <div class="footer__col footer__news">
+        <h4>Newsletter</h4>
+        <p>Don't miss any news — sign up for our newsletter.</p>
+        <form class="footer__news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Thanks';">
+          <input type="email" placeholder="E-mail" required aria-label="Email" />
+          <button type="submit">Subscribe →</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© <span data-year>2026</span> G-Brio. All rights reserved.</div>
+      <div class="footer__legal">
+        <a href="privacy-notice.html">Privacy notice</a>
+        <a href="terms-and-conditions.html">Terms and conditions</a>
+        <a href="legal-notice.html">Legal notice</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gbrio.js?v=28"></script>
+</body>
+</html>

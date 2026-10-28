@@ -1,0 +1,192 @@
+[build]
+  publish = "."
+
+# Serve all .html files with correct MIME type
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Content-Type = "text/html; charset=UTF-8"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Content-Type = "text/css; charset=UTF-8"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Content-Type = "application/javascript; charset=UTF-8"
+
+# Clean URL rewrites (optional — also works with direct .html links)
+[[redirects]]
+  from = "/about"
+  to   = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/about/"
+  to   = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/configurator"
+  to   = "/configurator.html"
+  status = 200
+
+[[redirects]]
+  from = "/configurator/"
+  to   = "/configurator.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to   = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact/"
+  to   = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/inserate"
+  to   = "/inserate.html"
+  status = 200
+
+[[redirects]]
+  from = "/inserate/"
+  to   = "/inserate.html"
+  status = 200
+
+[[redirects]]
+  from = "/inserate/230ge"
+  to   = "/inserate-230ge.html"
+  status = 200
+
+[[redirects]]
+  from = "/inserate/230ge/"
+  to   = "/inserate-230ge.html"
+  status = 200
+
+[[redirects]]
+  from = "/inserate/240gd"
+  to   = "/inserate-240gd.html"
+  status = 200
+
+[[redirects]]
+  from = "/inserate/240gd/"
+  to   = "/inserate-240gd.html"
+  status = 200
+
+[[redirects]]
+  from = "/legal-notice"
+  to   = "/legal-notice.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-notice"
+  to   = "/privacy-notice.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms-and-conditions"
+  to   = "/terms-and-conditions.html"
+  status = 200
+
+# --- German site (/de/) ---
+[[redirects]]
+  from = "/de"
+  to   = "/de/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/about"
+  to   = "/de/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/about/"
+  to   = "/de/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/configurator"
+  to   = "/de/configurator.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/configurator/"
+  to   = "/de/configurator.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/contact"
+  to   = "/de/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/contact/"
+  to   = "/de/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/inserate"
+  to   = "/de/inserate.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/inserate/"
+  to   = "/de/inserate.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/inserate/230ge"
+  to   = "/de/inserate-230ge.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/inserate/230ge/"
+  to   = "/de/inserate-230ge.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/inserate/240gd"
+  to   = "/de/inserate-240gd.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/inserate/240gd/"
+  to   = "/de/inserate-240gd.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/legal-notice"
+  to   = "/de/legal-notice.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/legal-notice/"
+  to   = "/de/legal-notice.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/privacy-notice"
+  to   = "/de/privacy-notice.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/privacy-notice/"
+  to   = "/de/privacy-notice.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/terms-and-conditions"
+  to   = "/de/terms-and-conditions.html"
+  status = 200
+
+[[redirects]]
+  from = "/de/terms-and-conditions/"
+  to   = "/de/terms-and-conditions.html"
+  status = 200
+

@@ -1,0 +1,11 @@
+# Keep web assets as LF everywhere so deploys match the working tree
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary

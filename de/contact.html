@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G-BRIO — Kontakt</title>
+  <meta name="description" content="Sprich mit G-Brio – auf Mallorca oder online. Wir sind für Deine Fragen, Konfigurationen und Besuche da." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../images/app-icon.png" />
+  <link rel="stylesheet" href="../css/gbrio.css?v=28" />
+  <link rel="alternate" hreflang="en" href="https://www.g-brio.com/contact.html" />
+  <link rel="alternate" hreflang="de" href="https://www.g-brio.com/de/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.g-brio.com/contact.html" />
+</head>
+<body>
+
+  <header class="nav is-scrolled" role="banner">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="G-Brio">
+        <img src="../images/g-brio-20logo-20white.svg" alt="G-Brio" />
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav__link">Start</a>
+        <a href="about.html" class="nav__link">Über uns</a>
+        <a href="inserate.html" class="nav__link">Inserate</a>
+        <a href="configurator.html" class="nav__link">Konfigurator</a>
+        <a href="contact.html" class="nav__link is-active">Kontakt</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang" aria-label="Sprache"><a href="../contact.html" hreflang="en" lang="en">EN</a><span class="sep">/</span><a href="contact.html" hreflang="de" lang="de" class="active">DE</a></span>
+        <a href="configurator.html" class="btn btn--nav">
+          Konfigurieren <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <button class="nav__burger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Menü">
+    <a href="index.html">Start</a>
+    <a href="about.html">Über uns</a>
+    <a href="inserate.html">Inserate</a>
+    <a href="configurator.html">Konfigurator</a>
+    <a href="contact.html">Kontakt</a>
+    <div class="nav__mobile-lang"><a href="../contact.html" hreflang="en" lang="en">EN</a><a href="contact.html" hreflang="de" lang="de" class="active">DE</a></div>
+  </div>
+
+  <main style="padding-top: var(--nav-h);">
+
+    <section class="section section--tight">
+      <div class="container">
+        <div style="max-width: 60ch; margin-bottom: clamp(48px, 7vw, 88px);">
+          <p class="eyebrow mb-s">Kontakt</p>
+          <h1 class="h1">Nimm Kontakt auf.</h1>
+          <p class="lead mt-s">
+            Fragen, Aufträge oder ein Besuch im Atelier – schreib uns und wir antworten innerhalb eines Werktags.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- FORM -->
+          <form class="reveal" onsubmit="event.preventDefault(); this.querySelector('.form-success').hidden=false; this.querySelectorAll('input,textarea,button').forEach(el=>el.disabled=true);" style="display:flex; flex-direction:column; gap:16px;">
+            <div>
+              <label class="sr-only" for="name">Name</label>
+              <input class="input" id="name" name="name" type="text" placeholder="Name" required />
+            </div>
+            <div>
+              <label class="sr-only" for="email">E-Mail</label>
+              <input class="input" id="email" name="email" type="email" placeholder="E-Mail" required />
+            </div>
+            <div>
+              <label class="sr-only" for="message">Nachricht</label>
+              <textarea class="input" id="message" name="message" placeholder="Deine Nachricht" required></textarea>
+            </div>
+            <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+              <button class="btn btn--primary" type="submit">
+                Nachricht senden <span class="arrow" aria-hidden="true">→</span>
+              </button>
+              <p class="form-success muted" hidden style="margin:0;">
+                Danke – Deine Nachricht wurde gesendet.
+              </p>
+            </div>
+          </form>
+
+          <!-- INFO -->
+          <div class="reveal reveal--delay-1">
+            <div class="contact-list">
+
+              <a class="contact-item" href="mailto:info@g-brio.com">
+                <div>
+                  <div class="contact-item__label">E-Mail</div>
+                  <div class="contact-item__value">info@g-brio.com</div>
+                </div>
+              </a>
+
+              <a class="contact-item" href="tel:+494052470230">
+                <div>
+                  <div class="contact-item__label">Telefon</div>
+                  <div class="contact-item__value">+49 40 52470230</div>
+                </div>
+              </a>
+
+              <div class="contact-item">
+                <div>
+                  <div class="contact-item__label">Standort</div>
+                  <div class="contact-item__value">Mallorca, Spanien</div>
+                </div>
+              </div>
+
+              <a class="contact-item" href="mailto:info@g-brio.com?subject=Schedule%20a%20meeting">
+                <div>
+                  <div class="contact-item__label">Persönlich</div>
+                  <div class="contact-item__value">Termin vereinbaren →</div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS ribbon -->
+    <section class="section section--tight">
+      <div class="ribbon">
+        <div class="ribbon__cell reveal">
+          <div>
+            <div class="ribbon__label">Showroom</div>
+            <div class="ribbon__place">Mallorca, Spanien</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html"><img src="../images/g-brio-20logo-20white.svg" alt="G-Brio" /></a>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/gbrio_official" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="inserate.html">Inserate</a></li>
+            <li><a href="configurator.html">Konfigurator</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:info@g-brio.com">info@g-brio.com</a></li>
+            <li><a href="tel:+494052470230">+49 40 52470230</a></li>
+            <li>Mallorca, Spanien</li>
+          </ul>
+        </div>
+        <div class="footer__col footer__news">
+          <h4>Newsletter</h4>
+          <p>Verpasse keine Neuigkeiten – trage Dich in unseren Newsletter ein.</p>
+          <form class="footer__news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Danke';">
+            <input type="email" placeholder="E-Mail" required aria-label="E-Mail" />
+            <button type="submit">Anmelden →</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>© <span data-year>2026</span> G-Brio. Alle Rechte vorbehalten.</div>
+        <div class="footer__legal">
+          <a href="privacy-notice.html">Datenschutz</a>
+          <a href="terms-and-conditions.html">AGB</a>
+          <a href="legal-notice.html">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/gbrio.js?v=28"></script>
+</body>
+</html>

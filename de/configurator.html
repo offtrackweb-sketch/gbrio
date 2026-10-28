@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G-BRIO — 3D-Konfigurator</title>
+  <meta name="description" content="Gestalte Deinen G-Brio in Echtzeit mit unserem 3D-Konfigurator. Farben, Felgen, Verdeck, jedes Detail – ganz nach Deinem Geschmack." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="../images/app-icon.png" />
+  <link rel="stylesheet" href="../css/gbrio.css?v=28" />
+  <link rel="alternate" hreflang="en" href="https://www.g-brio.com/configurator.html" />
+  <link rel="alternate" hreflang="de" href="https://www.g-brio.com/de/configurator.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.g-brio.com/configurator.html" />
+</head>
+<body>
+
+  <header class="nav is-scrolled" role="banner">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="G-Brio">
+        <img src="../images/g-brio-20logo-20white.svg" alt="G-Brio" />
+      </a>
+      <nav class="nav__links" aria-label="Hauptnavigation">
+        <a href="index.html" class="nav__link">Start</a>
+        <a href="about.html" class="nav__link">Über uns</a>
+        <a href="inserate.html" class="nav__link">Inserate</a>
+        <a href="configurator.html" class="nav__link is-active">Konfigurator</a>
+        <a href="contact.html" class="nav__link">Kontakt</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="nav__lang" aria-label="Sprache"><a href="../configurator.html" hreflang="en" lang="en">EN</a><span class="sep">/</span><a href="configurator.html" hreflang="de" lang="de" class="active">DE</a></span>
+        <a href="contact.html" class="btn btn--nav">
+          Anfrage senden <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <button class="nav__burger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Menü">
+    <a href="index.html">Start</a>
+    <a href="about.html">Über uns</a>
+    <a href="inserate.html">Inserate</a>
+    <a href="configurator.html">Konfigurator</a>
+    <a href="contact.html">Kontakt</a>
+    <div class="nav__mobile-lang"><a href="../configurator.html" hreflang="en" lang="en">EN</a><a href="configurator.html" hreflang="de" lang="de" class="active">DE</a></div>
+  </div>
+
+  <main style="padding-top: var(--nav-h);">
+
+    <section style="padding: clamp(16px, 2vw, 28px) 0 clamp(40px, 6vw, 72px);">
+      <div class="container">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom: clamp(14px, 1.6vw, 22px);">
+          <p class="eyebrow" style="margin:0;">3D-Konfigurator</p>
+          <h1 class="h3" style="margin:0; text-align: right;">
+            Gestalte Dein G, Stück für Stück.
+          </h1>
+        </div>
+
+        <div class="configurator-frame reveal">
+          <div class="configurator-frame__scale">
+            <iframe
+              id="configurator-iframe"
+              src="https://s3.eu-central-1.amazonaws.com/marevo.vision/RelevantProjects/webAR/Pavlo+Voronin/gbrio_demo/030/index.html"
+              title="G-Brio 3D-Konfigurator"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <p class="muted" style="max-width:60ch; margin:clamp(20px, 2.5vw, 32px) 0 0; font-size: 0.85rem;">
+          Probleme? Der Konfigurator läuft am besten am Desktop. Deine Konfiguration wird in der URL gespeichert – Du kannst sie als Lesezeichen sichern oder mit uns teilen.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html"><img src="../images/g-brio-20logo-20white.svg" alt="G-Brio" /></a>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/gbrio_official" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="inserate.html">Inserate</a></li>
+            <li><a href="configurator.html">Konfigurator</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:info@g-brio.com">info@g-brio.com</a></li>
+            <li><a href="tel:+494052470230">+49 40 52470230</a></li>
+            <li>Mallorca, Spanien</li>
+          </ul>
+        </div>
+        <div class="footer__col footer__news">
+          <h4>Newsletter</h4>
+          <p>Verpasse keine Neuigkeiten – trage Dich in unseren Newsletter ein.</p>
+          <form class="footer__news-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; this.querySelector('button').textContent='Danke';">
+            <input type="email" placeholder="E-Mail" required aria-label="E-Mail" />
+            <button type="submit">Anmelden →</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>© <span data-year>2026</span> G-Brio. Alle Rechte vorbehalten.</div>
+        <div class="footer__legal">
+          <a href="privacy-notice.html">Datenschutz</a>
+          <a href="terms-and-conditions.html">AGB</a>
+          <a href="legal-notice.html">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Configurator <-> page message bridge (preserved from original) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var origin = "https://s3.eu-central-1.amazonaws.com";
+      var iframe = document.getElementById("configurator-iframe");
+      if (!iframe) return;
+      var baseUrl = window.location.origin + window.location.pathname;
+      var currentUrl = window.location.href;
+      var urlParams = new URLSearchParams(window.location.search);
+      var configParam = urlParams.get("config") || "";
+      function send(msg) { iframe.contentWindow.postMessage(msg, origin); }
+      iframe.addEventListener("load", function () {
+        send("WEBFLOW_URL_BASE|" + baseUrl);
+        send("WEBFLOW_CURRENT_URL|" + currentUrl);
+        if (configParam) send("WEBFLOW_URL_LOAD_PARAMS|" + configParam);
+        send("WEBFLOW_IS_LOADED|");
+      });
+      window.addEventListener("message", function (event) {
+        if (event.origin !== origin) return;
+        var data = event.data;
+        if (typeof data !== "string") return;
+        if (data.indexOf("URL_PARAMS|") === 0 || data.indexOf("URL_PARAMS|") > -1) {
+          var params = data.replace("URL_PARAMS|", "");
+          var newUrl = baseUrl + "?config=" + encodeURIComponent(params);
+          window.history.pushState({}, "", newUrl);
+        }
+        if (data.indexOf("WEBFLOW_URL_COPY_TO_CLIPBOARD|") > -1) {
+          navigator.clipboard && navigator.clipboard.writeText(window.location.href);
+        }
+      });
+    });
+  </script>
+
+  <script src="../js/gbrio.js?v=28"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / tooling
+.vscode/
+.idea/
+
+# Netlify local state
+.netlify/
+
+# Dependencies (not used by this static site, ignored defensively)
+node_modules/
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
