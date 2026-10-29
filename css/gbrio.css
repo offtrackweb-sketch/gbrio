@@ -348,25 +348,31 @@ input, textarea { font: inherit; color: inherit; }
   inset: 0;
   z-index: -2;
 }
-.hero__media img,
-.hero__media video {
+.hero__media picture { display: block; width: 100%; height: 100%; }
+.hero__media img {
   width: 100%; height: 100%;
   object-fit: cover;
+  /* The car sits right of centre in the landscape crop; when narrower screens trim the sides,
+     keep it clear of the bottom-left headline. The portrait crop is centred on the car. */
+  object-position: 70% 50%;
   transform: scale(1.06);
   animation: heroZoom 2.4s var(--ease) 0.1s forwards;
+}
+@media (orientation: portrait) {
+  .hero__media img { object-position: 50% 50%; }
 }
 @keyframes heroZoom { to { transform: scale(1); } }
 .hero__media::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* Slight dark wash for readability over video (~5% darker) */
+  /* Slight dark wash for readability over the photo (~5% darker) */
   background:
     linear-gradient(180deg, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.23) 28%, rgba(0,0,0,0.23) 55%, rgba(0,0,0,0.86) 100%),
     rgba(0,0,0,0.05);
   z-index: 1;
 }
-/* Subtle film grain over the hero video */
+/* Subtle film grain over the hero photo */
 .hero__media::before {
   content: "";
   position: absolute;
@@ -2268,7 +2274,6 @@ a.contact-item:hover .contact-item__value { color: var(--muted); }
     min-height: 100vh; /* fallback */
   }
   .hero__media,
-  .hero__media video,
   .hero__media img {
     width: 100%;
     height: 100%;

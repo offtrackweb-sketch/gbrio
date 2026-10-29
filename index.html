@@ -12,7 +12,7 @@
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/app-icon.png" />
-  <link rel="stylesheet" href="css/gbrio.css?v=29" />
+  <link rel="stylesheet" href="css/gbrio.css?v=30" />
   <link rel="alternate" hreflang="en" href="https://www.g-brio.com/" />
   <link rel="alternate" hreflang="de" href="https://www.g-brio.com/de/" />
   <link rel="alternate" hreflang="x-default" href="https://www.g-brio.com/" />
@@ -66,9 +66,15 @@
     <!-- HERO (full-bleed) -->
     <section class="hero">
       <div class="hero__media">
-        <video autoplay muted loop playsinline preload="auto" poster="images/gbrio-hero-poster.webp">
-          <source src="video/gbrio-header.mp4?v=2" type="video/mp4" />
-        </video>
+        <picture>
+          <source media="(orientation: portrait)"
+                  srcset="images/gbrio-hero-mobile-p-640.webp 640w, images/gbrio-hero-mobile-p-960.webp 960w, images/gbrio-hero-mobile-p-1280.webp 1280w, images/gbrio-hero-mobile.webp 1600w"
+                  sizes="max(100vw, 72vh)" />
+          <img src="images/gbrio-hero-p-1920.webp"
+               srcset="images/gbrio-hero-p-960.webp 960w, images/gbrio-hero-p-1440.webp 1440w, images/gbrio-hero-p-1920.webp 1920w, images/gbrio-hero.webp 2560w"
+               sizes="max(100vw, 160vh)" width="2560" height="1600" fetchpriority="high" decoding="async"
+               alt="G-Brio 240GD framed by stacked shipping containers, reflected in a rain puddle" />
+        </picture>
       </div>
 
       <div class="hero__content">
@@ -339,6 +345,6 @@
     </div>
   </footer>
 
-  <script src="js/gbrio.js?v=28"></script>
+  <script src="js/gbrio.js?v=29"></script>
 </body>
 </html>

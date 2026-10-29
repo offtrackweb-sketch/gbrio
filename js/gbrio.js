@@ -6,11 +6,11 @@
   const loader = document.getElementById("loader");
   if (loader) {
     const hide = () => loader.classList.add("is-gone");
-    // Hide as soon as the video (or window) is ready — max 2.8s
-    const vid = document.querySelector(".hero__media video");
-    if (vid) {
-      const onReady = () => { hide(); vid.removeEventListener("canplay", onReady); };
-      vid.addEventListener("canplay", onReady);
+    // Hide as soon as the hero photo (or window) is ready — max 2.8s
+    const heroImg = document.querySelector(".hero__media img");
+    if (heroImg) {
+      if (heroImg.complete) hide();
+      else heroImg.addEventListener("load", hide, { once: true });
     }
     window.addEventListener("load", hide);
     setTimeout(hide, 2800);
