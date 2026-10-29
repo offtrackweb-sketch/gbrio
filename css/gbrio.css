@@ -347,19 +347,27 @@ input, textarea { font: inherit; color: inherit; }
   position: absolute;
   inset: 0;
   z-index: -2;
+  overflow: hidden;
 }
 .hero__media picture { display: block; width: 100%; height: 100%; }
 .hero__media img {
   width: 100%; height: 100%;
   object-fit: cover;
-  /* Both crops are centred on the car. On wide screens trim more from the top than the bottom
-     so the car stays in the upper half, above the headline. */
-  object-position: 50% 70%;
+  /* The car is centred in the frame and fills its middle; trim the sky rather than the road
+     so the car stays above the text bar. */
+  object-position: 50% 100%;
   transform: scale(1.06);
   animation: heroZoom 2.4s var(--ease) 0.1s forwards;
 }
+@media (min-aspect-ratio: 2/1) {
+  .hero__media img { object-position: 50% 55%; }
+}
+/* Portrait: the photo sits in a panel at the top (4:5 crop centred on the car) and fades
+   into a dark base, with the text below it */
 @media (orientation: portrait) {
-  .hero__media img { object-position: 50% 50%; }
+  .hero { background: #121212; }
+  .hero__media { bottom: auto; height: min(125vw, 62vh); }
+  .hero__media img { object-position: 50% 35%; }
 }
 @keyframes heroZoom { to { transform: scale(1); } }
 .hero__media::after {
@@ -368,9 +376,16 @@ input, textarea { font: inherit; color: inherit; }
   inset: 0;
   /* Light wash: darker only behind the nav and the text block at the bottom */
   background: linear-gradient(180deg,
-    rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 20%, rgba(0,0,0,0) 42%,
-    rgba(0,0,0,0.22) 60%, rgba(0,0,0,0.72) 100%);
+    rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 20%, rgba(0,0,0,0) 62%,
+    rgba(0,0,0,0.32) 78%, rgba(0,0,0,0.72) 100%);
   z-index: 1;
+}
+@media (orientation: portrait) {
+  .hero__media::after {
+    background: linear-gradient(180deg,
+      rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.06) 18%, rgba(18,18,18,0) 70%,
+      rgba(18,18,18,0.7) 88%, #121212 100%);
+  }
 }
 /* Subtle film grain over the hero photo */
 .hero__media::before {
@@ -463,6 +478,20 @@ input, textarea { font: inherit; color: inherit; }
   transform: translateY(20px);
   animation: fadeUp 1s var(--ease) 0.7s forwards;
   flex-wrap: wrap;
+}
+/* Landscape: headline on one row, intro text and buttons side by side below it,
+   so the text bar stays low and clear of the car */
+@media (min-width: 900px) and (orientation: landscape) {
+  .hero__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    column-gap: 48px;
+    padding-bottom: clamp(32px, 3vw, 56px);
+  }
+  .hero__headline { grid-column: 1 / -1; }
+  .hero__sub { margin-top: 16px; max-width: 76ch; }
+  .hero__ctas { margin-top: 0; flex-wrap: nowrap; }
 }
 
 .hero__meta {
@@ -2271,18 +2300,8 @@ a.contact-item:hover .contact-item__value { color: var(--muted); }
   .hero__headline { font-size: clamp(1.25rem, 6vw, 1.9rem); letter-spacing: -0.01em; }
   /* Mobile hero: fills full screen */
   .hero {
-    min-height: 100dvh;
     min-height: 100vh; /* fallback */
-  }
-  .hero__media,
-  .hero__media img {
-    width: 100%;
-    height: 100%;
     min-height: 100dvh;
-    min-height: 100vh;
-    position: absolute;
-    inset: 0;
-    object-fit: cover;
   }
   .hero__content { padding-bottom: 44px; padding-top: calc(var(--nav-h) + 24px); }
   /* Both hero buttons on one row, so the text block stays below the car on short phones */
