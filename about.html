@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,200..700;1,200..700&display=swap" rel="stylesheet" />
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/app-icon.png" />
-  <link rel="stylesheet" href="css/gbrio.css?v=28" />
+  <link rel="stylesheet" href="css/gbrio.css?v=29" />
   <link rel="alternate" hreflang="en" href="https://www.g-brio.com/about.html" />
   <link rel="alternate" hreflang="de" href="https://www.g-brio.com/de/about.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.g-brio.com/about.html" />
@@ -54,10 +54,15 @@
     <!-- HERO -->
     <section class="page-hero page-hero--about">
       <div class="page-hero__media">
-        <img src="images/about-hero.jpg"
-             srcset="images/about-hero-1200.jpg 1200w, images/about-hero.jpg 2400w"
-             sizes="100vw"
-             alt="" />
+        <picture>
+          <source media="(max-width: 640px) and (orientation: portrait)"
+                  srcset="images/gbrio-about-hero-mobile-p-500.webp 500w, images/gbrio-about-hero-mobile-p-800.webp 800w, images/gbrio-about-hero-mobile.webp 1080w"
+                  sizes="100vw" />
+          <img src="images/gbrio-about-hero-p-1600.webp"
+               srcset="images/gbrio-about-hero-p-800.webp 800w, images/gbrio-about-hero-p-1080.webp 1080w, images/gbrio-about-hero-p-1600.webp 1600w, images/gbrio-about-hero.webp 2000w"
+               sizes="(max-aspect-ratio: 1/1) 150vw, 100vw" width="2000" height="1333" fetchpriority="high"
+               alt="" />
+        </picture>
       </div>
       <div class="container page-hero__content">
         <p class="eyebrow">About G-Brio</p>
@@ -93,10 +98,11 @@
         </div>
       </div>
       <div class="about-statement__media reveal reveal--delay-1">
-        <img src="images/gbrio-port.jpg"
-             srcset="images/gbrio-port-1200.jpg 1200w, images/gbrio-port.jpg 2400w"
+        <img src="images/gbrio-about-statement-p-1080.webp"
+             srcset="images/gbrio-about-statement-p-500.webp 500w, images/gbrio-about-statement-p-800.webp 800w, images/gbrio-about-statement-p-1080.webp 1080w, images/gbrio-about-statement.webp 1400w"
              sizes="(max-width: 900px) 100vw, 50vw"
-             alt="G-Brio in the harbour at dusk" />
+             width="1400" height="1050" loading="lazy" decoding="async"
+             alt="G-Brio parked in front of a white villa" />
       </div>
     </section>
 
@@ -137,10 +143,11 @@
     <!-- STANDARD (image + text) -->
     <section class="about-split">
       <div class="about-split__media reveal">
-        <img src="images/gbrio-villa-rear.jpg"
-             srcset="images/gbrio-villa-rear-1200.jpg 1200w, images/gbrio-villa-rear.jpg 2400w"
+        <img src="images/gbrio-about-interior-p-1080.webp"
+             srcset="images/gbrio-about-interior-p-500.webp 500w, images/gbrio-about-interior-p-800.webp 800w, images/gbrio-about-interior-p-1080.webp 1080w, images/gbrio-about-interior.webp 1400w"
              sizes="(max-width: 900px) 100vw, 50vw"
-             alt="G-Brio rear view" />
+             width="1400" height="1050" loading="lazy" decoding="async"
+             alt="Hand-finished brown leather interior of a G-Brio" />
       </div>
       <div class="about-split__text reveal reveal--delay-1">
         <p class="eyebrow">Our standard</p>
@@ -217,10 +224,15 @@
     <!-- CTA -->
     <section class="about-cta">
       <div class="about-cta__media">
-        <img src="images/gbrio-coast.jpg"
-             srcset="images/gbrio-coast-1200.jpg 1200w, images/gbrio-coast.jpg 2400w"
-             sizes="100vw"
-             alt="" />
+        <picture>
+          <source media="(max-width: 640px) and (orientation: portrait)"
+                  srcset="images/gbrio-about-cta-mobile-p-500.webp 500w, images/gbrio-about-cta-mobile-p-800.webp 800w, images/gbrio-about-cta-mobile.webp 1080w"
+                  sizes="100vw" />
+          <img src="images/gbrio-about-cta-p-1600.webp"
+               srcset="images/gbrio-about-cta-p-800.webp 800w, images/gbrio-about-cta-p-1080.webp 1080w, images/gbrio-about-cta-p-1600.webp 1600w, images/gbrio-about-cta.webp 2000w"
+               sizes="(max-aspect-ratio: 1/1) 130vw, 100vw" width="2000" height="1333" loading="lazy" decoding="async"
+               alt="" />
+        </picture>
       </div>
       <div class="about-cta__inner reveal">
         <div>

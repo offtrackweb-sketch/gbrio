@@ -12,7 +12,7 @@
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/app-icon.png" />
-  <link rel="stylesheet" href="css/gbrio.css?v=28" />
+  <link rel="stylesheet" href="css/gbrio.css?v=29" />
   <link rel="alternate" hreflang="en" href="https://www.g-brio.com/" />
   <link rel="alternate" hreflang="de" href="https://www.g-brio.com/de/" />
   <link rel="alternate" hreflang="x-default" href="https://www.g-brio.com/" />
@@ -66,7 +66,7 @@
     <!-- HERO (full-bleed) -->
     <section class="hero">
       <div class="hero__media">
-        <video autoplay muted loop playsinline preload="auto" poster="images/header-gbrio.jpg">
+        <video autoplay muted loop playsinline preload="auto" poster="images/gbrio-hero-poster.webp">
           <source src="video/gbrio-header.mp4?v=2" type="video/mp4" />
         </video>
       </div>
@@ -120,10 +120,11 @@
           </div>
         </div>
         <div class="showcase__media reveal reveal--delay-1">
-          <img src="images/gbrio-villa.jpg"
-               srcset="images/gbrio-villa-1200.jpg 1200w, images/gbrio-villa.jpg 2400w"
-               sizes="(max-width: 1024px) 100vw, 55vw"
-               alt="G-Brio on the coast" />
+          <img src="images/gbrio-intro-p-1080.webp"
+               srcset="images/gbrio-intro-p-500.webp 500w, images/gbrio-intro-p-800.webp 800w, images/gbrio-intro-p-1080.webp 1080w, images/gbrio-intro.webp 1400w"
+               sizes="(max-width: 1023px) 100vw, 50vw"
+               width="1400" height="1120" loading="lazy" decoding="async"
+               alt="G-Brio with soft top beneath autumn trees by the river" />
         </div>
       </div>
     </section>
@@ -148,7 +149,15 @@
       <a class="cfg reveal reveal--delay-2" href="configurator.html"
          aria-label="Open the 3D configurator">
         <div class="cfg__media">
-          <img src="images/configurator-image.jpg" sizes="100vw" alt="G-Brio 3D configurator" />
+          <picture>
+            <source media="(max-width: 900px)"
+                    srcset="images/gbrio-configurator-mobile-p-500.webp 500w, images/gbrio-configurator-mobile-p-800.webp 800w, images/gbrio-configurator-mobile-p-1080.webp 1080w, images/gbrio-configurator-mobile.webp 1400w"
+                    sizes="100vw" />
+            <img src="images/gbrio-configurator-p-1600.webp"
+                 srcset="images/gbrio-configurator-p-800.webp 800w, images/gbrio-configurator-p-1080.webp 1080w, images/gbrio-configurator-p-1600.webp 1600w, images/gbrio-configurator-p-2000.webp 2000w, images/gbrio-configurator.webp 2400w"
+                 sizes="100vw" width="2400" height="1028" loading="lazy" decoding="async"
+                 alt="G-Brio 3D configurator" />
+          </picture>
         </div>
 
         <div class="cfg__panel" aria-hidden="true">
